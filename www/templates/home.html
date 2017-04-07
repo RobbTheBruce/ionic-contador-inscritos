@@ -1,0 +1,24 @@
+<ion-view view-title="Home" nav-view-direction="back">
+    <ion-content>
+
+        <div class="list list-inset">
+            <label class="item item-input">
+                <i class="icon ion-search placeholder-icon"></i>
+                <input type="text" ng-model="input.search" placeholder="Pesquisar Canal" ng-keypress="search()">
+            </label>
+        </div>
+
+
+        <div class="list">
+            <div class="item item-divider">
+                
+            </div>
+            <a class="item item-thumbnail-left" ng-click="select(channel)" ng-repeat="channel in channels">
+                <img ng-src="{{channel.snippet.thumbnails.default.url}}">
+                <h2>{{channel.snippet.channelTitle}}</h2>
+                <p>{{channel.snippet.description}}</p>
+            </a>
+
+        </div>
+    </ion-content>
+</ion-view>

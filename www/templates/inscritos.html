@@ -1,0 +1,46 @@
+<ion-view view-title="Inscritos">
+
+    <ion-content style="background-color: lightgray;">
+        <div class="bar bar-header" style="position: relative;">
+            <a class="button button-icon icon ion-ios-arrow-back" menu-toggle="left" ng-href="#/home"></a>
+        </div>
+        <img ng-src="{{channel.brandingSettings.image.bannerImageUrl}}" style="width: 100%; height: 55px;">
+        <div class="card" style="margin-top: 5px; margin-bottom: 5px;">
+            <div class="item item-text-wrap">
+                <div class="row">
+                    <div class="col col-50"><img style="border-radius: 50px;" ng-src="{{channel.snippet.thumbnails.default.url}}"></div>
+                    <div class="col">
+                        <h2 ng-class="subscriber" style="font-size: 30px;text-align: right;">{{channel.statistics.subscriberCount | number}}</h2>
+                        <p style="text-align: right;">Inscritos</p>
+                    </div>
+                </div>
+            </div>
+        </div>
+
+        <div class="list card" style="margin-top: 5px; margin-bottom: 5px;">
+
+            <a  class="item item-icon-left" style="text-align: right;">
+                <i class="icon ion-social-youtube"></i>
+                {{channel.statistics.subscriberCount| number}}
+            </a>
+
+            <a  class="item item-icon-left" style="text-align: right;">
+                <i class="icon ion-eye"></i>
+                {{channel.statistics.viewCount| number}}
+            </a>
+
+            <a class="item item-icon-left" style="text-align: right;">
+                <i class="icon ion-ios-videocam"></i>
+                {{channel.statistics.videoCount| number}}
+            </a>
+
+        </div>
+        <div class="card" style="margin-top: 5px; margin-bottom: 5px;">
+            <div class="item item-text-wrap">
+                <h2>Descrição</h2>
+                <p>{{channel.snippet.description}}</p>
+            </div>
+        </div>
+    </ion-content>
+    
+</ion-view>
