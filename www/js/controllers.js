@@ -3,7 +3,7 @@ var channel = {};
 angular.module('starter.controllers', [])
 
         .controller('HomeCtrl', function ($scope, $stateParams, $http, $ionicLoading, $state, $location) {
-
+            
             $scope.input = [];
             $scope.channels = [];
 
